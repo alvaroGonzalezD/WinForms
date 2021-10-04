@@ -22,10 +22,14 @@ namespace WinFormsContacts
             return contacto;
         }
 
+
+        #region Ejercicio 04
         public List<Contacto> GetContactos(string searchString = null)
         {
             return _dataAccessLayer.GetContactos(searchString);
         }
+        #endregion
+
 
         public void DeleteContacto(Contacto contacto)
         {

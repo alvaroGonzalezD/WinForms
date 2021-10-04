@@ -41,7 +41,7 @@ namespace WinFormsContacts
         public void LoadContacto(Contacto contacto)
         {
             _contacto = contacto;
-            if(contacto != null)
+            if (contacto != null)
             {
                 ClearForm();
 
@@ -61,3 +61,4 @@ namespace WinFormsContacts
         }
     }
 }
+
