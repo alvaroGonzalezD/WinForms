@@ -17,20 +17,22 @@ namespace WinFormsContacts
 
         public Contacto SaveContacto(Contacto contacto)
         {
-            _dataAccessLayer.InsertContacto(contacto);
-
+            if (contacto.Id == 0)
+            {
+                _dataAccessLayer.InsertContacto(contacto);
+            }
+            else
+            {
+                _dataAccessLayer.UpdateContacto(contacto);
+            }
             return contacto;
         }
 
-
-        #region Ejercicio 04
         public List<Contacto> GetContactos(string searchString = null)
         {
             return _dataAccessLayer.GetContactos(searchString);
         }
-        #endregion
-
-
+        
         public void DeleteContacto(Contacto contacto)
         {
             _dataAccessLayer.DeleteContacto(contacto.Id);

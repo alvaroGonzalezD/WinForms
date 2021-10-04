@@ -69,7 +69,7 @@ namespace WinFormsContacts
             {
                 conn.Open();
                 string query = @"
-                    UPDATE Contacts SET
+                    UPDATE Contactos SET
                         FirstName = @Nombre,
                         LastName = @Apellidos, 
                         Phone = @Telefono, 
